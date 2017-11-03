@@ -23,20 +23,11 @@ def stock_count(pet_shop_name)
 end
 
 def pets_by_breed(pet_shop_name, breed)
-  pets=[]   # make an empty array, gonna return this later
-
+  pets=[]
   for pet in pet_shop_name[:pets]
-    # for every pet in the pet shop
-    # result.push(pet[:pets][:breed])
     pets.push(pet) if pet[:breed] == breed
-
-
-    # if pet[:pets][:breed] == breed
-    #i wanna add each pet (whose breed is equal to the breed variable thats being passed in from the test)
-    #to the empty result array
   end
   return pets
-  #and then print the number of values in the array
 end
 
 def pets_by_breed2(pet_shop_name, breed)
@@ -51,7 +42,6 @@ def find_pet_by_name(pet_shop_name, petname)
   pets = {}
   for pet in pet_shop_name[:pets]
     if petname == pet[:name]
-      # pets
       return pets = {name: petname}
     end
   end
@@ -82,13 +72,3 @@ def add_pet_to_customer(customer, new_pet)
 
   return customer[:pets].length
 end
-
-
-
-# def nil_pet_by_name
-#   pets[]
-#   for pet in pet_shop_name[:pets]
-#     pets.push(pet) if pet[:name] == breed
-#   end
-#   return pets
-# end
