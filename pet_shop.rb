@@ -1,0 +1,40 @@
+def pet_shop_name(name)
+  return @pet_shop[:name]
+end
+
+def total_cash(cash)
+  return @pet_shop[:admin][:total_cash]
+end
+
+def add_or_remove_cash(pet_shop, money)
+  return pet_shop[:admin][:total_cash] += money
+end
+
+def pets_sold(sold)
+  return @pet_shop[:admin][:pets_sold]
+end
+
+def increase_pets_sold(pet_shop_name , sold)
+  return @pet_shop[:admin][:pets_sold] += sold
+end
+
+def stock_count(pet_shop_name)
+  return pet_shop_name[:pets].length
+end
+
+def pets_by_breed(pet_shop_name, breed)
+  pets=[]   # make an empty array, gonna return this later
+
+  for pet in pet_shop_name[:pets]
+    # for every pet in the pet shop
+    # result.push(pet[:pets][:breed])
+    pets.push(pet) if pet[:breed] == breed
+
+
+    # if pet[:pets][:breed] == breed
+    #i wanna add each pet (whose breed is equal to the breed variable thats being passed in from the test)
+    #to the empty result array
+  end
+  return pets
+  #and then print the number of values in the array
+end
