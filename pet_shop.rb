@@ -38,3 +38,34 @@ def pets_by_breed(pet_shop_name, breed)
   return pets
   #and then print the number of values in the array
 end
+
+def pets_by_breed2(pet_shop_name, breed)
+  pets[]
+  for pet in pet_shop_name[:pets]
+    pets.push(pet) if pet[:breed] == breed
+  end
+  return pets
+end
+
+def find_pet_by_name(pet_shop_name, petname)
+  pets = {}
+  for pet in pet_shop_name[:pets]
+    if petname == pet[:name]
+      # pets
+      return pets = {name: petname}
+    end
+  end
+  puts pets
+end
+
+
+
+
+
+# def nil_pet_by_name
+#   pets[]
+#   for pet in pet_shop_name[:pets]
+#     pets.push(pet) if pet[:name] == breed
+#   end
+#   return pets
+# end
