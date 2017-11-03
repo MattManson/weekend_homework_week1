@@ -58,7 +58,30 @@ def find_pet_by_name(pet_shop_name, petname)
   puts pets
 end
 
+def remove_pet_by_name(shop, name)
+  for pet in shop[:pets]
+    if name == pet[:name]
+      shop[:pets].delete(pet)
+    end
+  end
+  puts pet
+end
 
+def add_pet_to_stock(shop, newpet)
+  shop[:pets].push(newpet)
+  return [:pets].length
+
+end
+
+def customer_pet_count(customer)
+  return customer[:pets].length
+end
+
+def add_pet_to_customer(customer, new_pet)
+  customer[:pets].push(new_pet)
+
+  return customer[:pets].length
+end
 
 
 
